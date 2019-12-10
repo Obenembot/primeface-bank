@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Print Statements</title>
+
+        <style>
+            #customer thead{
+                background-color: red;
+                border-bottom-style: dotted;
+            }
+
+      
+        </style>
+    </h:head>
+    <h:body>
+ 
+       <!-- <h:form>
+
+            <table  id="customer" border="2">
+              
+                <th class="form">Transaction Id</th> 
+                <th class="form">Account Number</th> 
+                <th class="form">Transaction Type</th> 
+                <th class="form">Account Balance</th> 
+                <th class="form">Amount</th> 
+                <th class="form">Date</th> 
+                <th class="form">Reference</th> 
+
+                <tbody >
+
+                    <h:dataTable  border="2"    value="#{transactions.transactiontList}" var="tran">
+                        <h:column >#{tran.transactionId}</h:column>
+                        <h:column>#{tran.accountNumber}</h:column>
+                        <h:column>#{tran.transactionType}</h:column>
+                        <h:column>#{tran.accountBalance}</h:column>
+                        <h:column>#{tran.transactionAmount}</h:column>
+                        <h:column>#{tran.localDate}</h:column>
+                        <h:column>#{tran.reference}</h:column>
+
+                    </h:dataTable>
+                </tbody> 
+            </table>  
+        </h:form>
+        
+        -->
+        
+        <h:form>
+            <h1 align="center">Statement</h1> 
+             <h:column >
+                 <h:outputLabel>Account Number: </h:outputLabel>
+                    #{transactions.accountNumber}
+                </h:column>
+                 
+             <h:dataTable border="1" value="#{transactions.transactiontList}" var="trans">
+                <h:column >
+                    <f:facet name ="header">Transaction  ID</f:facet>
+                    #{trans.transactionId}
+                </h:column>
+                
+                 
+                <h:column >
+                    <f:facet name ="header">Transaction Type</f:facet>
+                    #{trans.transactionType}
+                </h:column>
+                
+                 <h:column >
+                    <f:facet name ="header">Account Balance</f:facet>
+                    #{trans.accountBalance}
+                </h:column>
+                <h:column >
+                    <f:facet name ="header">Transaction Amount</f:facet>
+                    #{trans.transactionAmount}
+                </h:column>
+                 
+                 <h:column >
+                    <f:facet name ="header">Date</f:facet>
+                    #{trans.localDate}
+                </h:column>
+                 
+                 <h:column >
+                    <f:facet name ="header">Reference</f:facet>
+                    #{trans.reference}
+                </h:column>
+                 
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+

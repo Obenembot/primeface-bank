@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>deposited</title>
+<link type="text/css" rel="stylesheet" 
+		  href="style.css" />
+    </h:head>
+    <h:body>
+        <h3 align="center"> Balance</h3>
+        <h:form>
+<!--
+            <table>
+                <thead>
+                    <tr  > 
+                        <th class="form">Account Number</th> 
+                        <th class="form">Account Status</th> 
+                        <th class="form">Account Type</th> 
+                        <th class="form">Balance</th> 
+                    </tr> 
+                </thead> 
+
+                <tbody>
+                    <tr>
+                        <td class="form">#{transactions.account.accountNumber}</td>
+                        <td class="form">#{transactions.account.accountStatus}</td>
+                        <td class="form">#{transactions.account.accountType}</td>
+                        <td class="form">#{transactions.account.balance}</td>
+                    </tr>
+                </tbody> 
+            </table>  
+            -->
+            <h:dataTable border="1" value="#{transactions.account}" var="trans">
+                <h:column >
+                    <f:facet name ="header">Account Number</f:facet>
+                    #{transactions.account.accountNumber}
+                </h:column>
+                
+                 <h:column >
+                    <f:facet name ="header">Account Status</f:facet>
+                    #{transactions.account.accountStatus}
+                </h:column>
+                
+                 <h:column >
+                    <f:facet name ="header">Account Type</f:facet>
+                    #{transactions.account.accountType}
+                </h:column>
+                
+                 <h:column >
+                    <f:facet name ="header">Account Balance</f:facet>
+                    #{transactions.account.balance}
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+

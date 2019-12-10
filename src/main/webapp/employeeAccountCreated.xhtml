@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>account created</title>
+    </h:head>
+    <h:body>
+        <h1>Employee Details</h1>
+      <h:form>
+
+            <table>
+                <thead>
+                    <tr > 
+                        <th class="form">Employee Id</th> 
+                        <th class="form">Employee Name</th> 
+                        <th class="form">User Name</th> 
+                        <th class="form">Password</th> 
+                    </tr> 
+                </thead>
+        
+                <tbody>
+                    <tr>
+                        <td class="form">#{empRegistration.employeeList.idNumber}</td>
+                        <td class="form">#{empRegistration.employeeList.name}</td>
+                        <td class="form">#{empRegistration.employeeList.logindetails.userName}</td>
+                        <td class="form">#{empRegistration.employeeList.logindetails.password}</td>
+                    </tr>
+                </tbody> 
+            </table>
+      </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>menu</title>
+    </h:head>
+    <h:body>
+        <h1 align="center"> PVI BANK</h1>
+        <h3 align="center"> Menu</h3> 
+
+
+
+        <div   style=" background-color:skyblue" align="center" >
+            <h:form>
+
+                <button style="width: 15">
+                    <h:commandLink  action="deposit.xhtml">
+                        <h:outputText value="Deposit"></h:outputText>
+                    </h:commandLink>
+                </button>
+
+                <br/>
+
+                <button style="width: 15">
+                    <h:commandLink  action="withdrawal.xhtml">
+                        <h:outputText value="withdrawal"></h:outputText>
+                    </h:commandLink>     
+                </button>
+
+                <br/>
+                <button style="width: 15">
+                    <h:commandLink  action="balance.xhtml">
+                        <h:outputText value="balance"></h:outputText>
+                    </h:commandLink> 
+                </button>
+
+                <br/>
+                <button style="width: 15">
+                    <h:commandLink  action="customerAccount.xhtml">
+                        <h:outputText value="Create Customer Account"></h:outputText>
+                    </h:commandLink> 
+                </button>
+                <br/>
+                <button style="width: 15">
+                    <h:commandLink  action="existingCustomerAccount.xhtml">
+                        <h:outputText value="Existing Customer Account"></h:outputText>
+                    </h:commandLink>  
+                </button>
+
+                <br/>
+                <button >
+                    <h:commandLink  action="transactions.xhtml">
+                        <h:outputText value="Print Statement"></h:outputText>
+                    </h:commandLink>  
+                </button>
+            </h:form> 
+
+        </div>
+    </h:body>
+</html>
+

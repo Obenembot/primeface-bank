@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>statement</title>
+       
+    </h:head>
+    <h:body>
+        <h1 align="center" >PVI Bank</h1>
+        <h3 align="center" >Print Statement</h3>
+        <div align="center">
+                  <h:form>
+                      <h:outputText value="#{transactions.message}"/><br/>
+                    <h:messages/>
+                 <h:outputText value="Enter Account Number"></h:outputText><br/>
+                 <h:inputText value="#{transactions.accountNumber}"/><br/>
+                   <h:outputText value="Enter Number of Month To Print"></h:outputText><br/>
+                   <h:inputText value="#{transactions.numberOfMonths}"/><br/>
+                   <h:commandButton value="Submit" action="#{transactions.printStatement()}" /><br/>
+            </h:form>
+            </div>
+    </h:body>
+</html>
+

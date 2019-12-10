@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>existing customer account</title>
+    </h:head>
+    <h:body>
+        <h1 align="center">PVI BANK</h1>
+        <h3 align="center"> Existing Customer Account</h3>
+        <div align="center">
+            <h:form>
+                       <h:outputText value="Enter Customer Id"></h:outputText><br/>
+                <h:inputText value="#{customer.customerId}"/><br/>
+                       <h:outputText value="Enter Account Number"></h:outputText><br/>
+                <h:inputText value="#{customer.accountNumber}"/><br/>
+                       <h:outputText value="Enter Account Type"></h:outputText><br/>
+                <h:inputText value="#{customer.accountType}" /><br/>
+                       <h:outputText value="Enter Account Status"></h:outputText><br/>
+                <h:inputText value="#{customer.accountStatus}" /><br/>
+                       <h:outputText value="Enter Amount"></h:outputText><br/>
+                <h:inputText value="#{customer.amount}" /><br/> 
+
+                       <h:outputText value="Enter Card Type "></h:outputText><br/>
+                <h:inputText value="#{customer.cardType}" /><br/>
+                       <h:outputText value="Enter Card Number"></h:outputText><br/>
+                <h:inputText value="#{customer.cardNumber}"/><br/>
+                       <h:outputText value="Enter Pin"></h:outputText><br/>
+                <h:inputText value="#{customer.cardPin}" /><br/>
+                
+                <h:commandButton value="Create" action="#{customer.existingCustomer()}"/><br/>
+            </h:form>
+
+        </div>
+    </h:body>
+</html>
+
