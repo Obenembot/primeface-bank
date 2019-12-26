@@ -9,8 +9,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -116,13 +114,15 @@ public class TransactionController {
         this.em = em;
     }
 
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("pviBank");
-    EntityManager em = emf.createEntityManager();
+    EntityManagerFactory emf = null;//Persistence.createEntityManagerFactory("pviBank");
+    EntityManager em = null;// emf.createEntityManager();
 
     List< Account> accountList = null;
     Transactions transactions = new Transactions();
 
     public String deposit() {
+        emf = Persistence.createEntityManagerFactory("pviBank");
+        em = emf.createEntityManager();
         em.getTransaction().begin();
         accountList = (List<Account>) em.createQuery("SELECT a FROM Account a").getResultList();
 
@@ -167,6 +167,8 @@ public class TransactionController {
     }
 
     public String withdrawal() {
+        emf = Persistence.createEntityManagerFactory("pviBank");
+        em = emf.createEntityManager();
         em.getTransaction().begin();
         accountList = (List<Account>) em.createQuery("SELECT a FROM Account a").getResultList();
 
@@ -215,7 +217,8 @@ public class TransactionController {
     }
 
     public String balance() {
-
+        emf = Persistence.createEntityManagerFactory("pviBank");
+        em = emf.createEntityManager();
         em.getTransaction().begin();
         accountList = (List<Account>) em.createQuery("SELECT a FROM Account a").getResultList();
         int i = 0;
@@ -254,6 +257,8 @@ public class TransactionController {
     }
 
     public String printStatement() {
+        emf = Persistence.createEntityManagerFactory("pviBank");
+        em = emf.createEntityManager();
         transactiontList = new ArrayList<>();
 
         em.getTransaction().begin();

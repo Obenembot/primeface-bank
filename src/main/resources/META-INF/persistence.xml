@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="pviBank" transaction-type="RESOURCE_LOCAL">
+    <non-jta-data-source>java:app/pviB</non-jta-data-source>
     <class>za.co.pvi_bank.entities.person.employee.Employee</class>
     <class>za.co.pvi_bank.entities.login_details.LoginDetails</class>
     <class>za.co.pvi_bank.entities.person.customer.Customer</class>
     <class>za.co.pvi_bank.entities.account.Account</class>
     <class>za.co.pvi_bank.entities.card.Card</class>
     <class>za.co.pvi_bank.entities.transactions.Transactions</class>
-    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/bank_db"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
       <property name="javax.persistence.jdbc.password" value="pvi@2019"/>
-      <!--
       <property name="eclipselink.ddl-generation.output-mode" value="database"/>
-      <property name="eclipselink.ddl-generation" value="create-tables"/>-->
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
     </properties>
   </persistence-unit>
 </persistence>

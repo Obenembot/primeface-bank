@@ -39,7 +39,7 @@ public class Transactions implements Serializable {
     @Column(name = "reference")
     private String reference;
 
-    @Column(name = "date")
+    @Column(name = "transaction_date")
     private String localDate;
 
     public Transactions(long transactionId, String transactionType, long accountNumber, 
